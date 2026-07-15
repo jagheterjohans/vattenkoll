@@ -1,4 +1,4 @@
-console.log("script.js körs!");
+
 
 fetch("kommuner.json")
   .then(response => response.json())
