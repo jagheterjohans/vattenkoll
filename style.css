@@ -1,32 +1,13 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 30px;
-}
+ body{
 
-button {
+max-width:900px;
 
-  margin: 5px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background: white;
-  cursor: pointer;
+margin:auto;
 
-}
+font-family:system-ui;
 
-button:hover {
+background:#eef5f8;
 
-  background: #eaf6ff;
-
-}
-
-#vattenprofil {
-
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 10px;
-  background: #f5f9fb;
+padding:30px;
 
 }
