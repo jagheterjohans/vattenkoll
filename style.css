@@ -11,3 +11,33 @@ background:#eef5f8;
 padding:30px;
 
 }
+
+.kort {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+.betyg {
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+#kommunlista button {
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+details {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.uppdaterad {
+  font-size: 12px;
+  color: gray;
+}
