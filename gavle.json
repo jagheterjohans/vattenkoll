@@ -36,6 +36,26 @@
     "te": {
       "betyg": 9,
       "kommentar": "Det mjuka vattnet passar utmärkt för de flesta tesorter."
-    }
+    },
+
+    "hem": {
+  "kalk": {
+    "klass": "Mjukt",
+    "kommentar": "Låg risk för kalkavlagringar i dusch, kranar och hushållsapparater."
+  },
+
+  "avkalkning": {
+    "kaffebryggare": "Avkalka vid behov. Mjukt vatten ger normalt mindre kalkbeläggningar.",
+    "övrigt": "Regelbunden avkalkning behövs normalt inte för hårt belastade ytor."
+  },
+
+  "tvätt": {
+    "kommentar": "Mjukt vatten kräver normalt mindre tvättmedel. Följ doseringen för mjukt vatten på förpackningen."
+  },
+
+  "diskmaskin": {
+    "kommentar": "Låg hårdhet innebär normalt liten risk för kalkproblem. Följ maskinens rekommenderade inställning."
+  }
+}
   }
 }
