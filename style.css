@@ -1,29 +1,32 @@
-body{
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
 
-font-family:Arial;
+button {
 
-max-width:800px;
-
-margin:auto;
-
-padding:40px;
-
-background:#f7fbfd;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
 
 }
 
-h1{
+button:hover {
 
-color:#1f6fb2;
+  background: #eaf6ff;
 
 }
 
-input{
+#vattenprofil {
 
-padding:12px;
-
-width:100%;
-
-font-size:18px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f5f9fb;
 
 }
