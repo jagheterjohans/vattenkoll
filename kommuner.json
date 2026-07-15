@@ -1,5 +1,10 @@
 [
-  "gavle",
-  "stockholm",
-  "uppsala"
+  {
+    "id": "gavle",
+    "namn": "Gävle"
+  },
+  {
+    "id": "ostersund",
+    "namn": "Östersund"
+  }
 ]
