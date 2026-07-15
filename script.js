@@ -1,4 +1,4 @@
-fetch("data/kommuner.json")
+fetch("kommuner.json")
   .then(response => response.json())
   .then(kommuner => {
 
