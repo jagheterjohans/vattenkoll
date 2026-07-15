@@ -51,18 +51,18 @@ function visaKommun(id) {
 
       profil.innerHTML = `
 
-      <h2>💧 ${data.kommun}</h2>
+      <h2>${data.kommun}</h2>
 
       <p><strong>Vattenverk:</strong> ${data.vattenverk}</p>
 
 
       <div class="kort">
 
-        <h3>💧 Dricksvatten</h3>
+        <h3>Dricksvatten</h3>
 
         <p class="betyg">
-          ${stjarnor(data.bedömning.dricksvatten.betyg)}
-        </p>
+  ${betyg(data.bedömning.dricksvatten.betyg)}
+</p>
 
         <p>
           ${data.bedömning.dricksvatten.kommentar}
@@ -74,7 +74,7 @@ function visaKommun(id) {
 
       <div class="kort">
 
-        <h3>🧰 Filtrering</h3>
+        <h3>Filtrering</h3>
 
         <p>
         ${data.bedömning.filtrering.motivering}
@@ -103,11 +103,11 @@ function visaKommun(id) {
 
       <div class="kort">
 
-        <h3>☕ Kaffe</h3>
+        <h3>Kaffe</h3>
 
         <p class="betyg">
-        ${stjarnor(data.bedömning.kaffe.betyg)}
-        </p>
+${betyg(data.bedömning.kaffe.betyg)}
+</p>
 
         <p>
         ${data.bedömning.kaffe.kommentar}
@@ -119,11 +119,11 @@ function visaKommun(id) {
 
       <div class="kort">
 
-        <h3>🍵 Te</h3>
+        <h3>Te</h3>
 
-        <p class="betyg">
-        ${stjarnor(data.bedömning.te.betyg)}
-        </p>
+       <p class="betyg">
+${betyg(data.bedömning.te.betyg)}
+</p>
 
         <p>
         ${data.bedömning.te.kommentar}
@@ -135,7 +135,7 @@ function visaKommun(id) {
 
       <details>
 
-        <summary>🧪 Tekniska analysvärden</summary>
+        <summary>Tekniska analysvärden</summary>
 
         <ul>
 
