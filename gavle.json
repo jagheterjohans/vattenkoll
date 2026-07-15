@@ -1,16 +1,41 @@
 {
   "kommun": "Gävle",
   "vattenverk": "Valboåsen",
-  "hårdhet": 5,
-  "kalcium": 21,
-  "magnesium": 2,
-  "klor": false,
-  "pfas": "Under gränsvärde",
-  "kaffe": {
-    "betyg": 6,
-    "kommentar": "Lite för mjukt för filterkaffe."
+
+  "källa": "Gästrike Vatten",
+  "rapport_datum": "2025-01-01",
+  "senast_uppdaterad": "2026-07-15",
+
+  "vattenvärden": {
+    "hårdhet": 5,
+    "kalcium": 21,
+    "magnesium": 2,
+    "klor": false,
+    "pfas": "Under gränsvärde"
   },
-  "te": {
-    "betyg": 9
+
+  "bedömning": {
+    "dricksvatten": {
+      "betyg": 9,
+      "kommentar": "Rent och säkert dricksvatten med god smak."
+    },
+
+    "filtrering": {
+      "rekommenderas": true,
+      "hälsoskäl": false,
+      "smak": true,
+      "kaffe": false,
+      "motivering": "Ett kolfilter kan förbättra smaken på dricksvattnet. Det finns ingen tydlig hälsovinst med filtrering utifrån de aktuella analysvärdena. För kaffe kan filtrering ge ett tunnare resultat eftersom vattnet redan är relativt mjukt."
+    },
+
+    "kaffe": {
+      "betyg": 6,
+      "kommentar": "Det mjuka vattnet kan ge ett något tunnare filterkaffe."
+    },
+
+    "te": {
+      "betyg": 9,
+      "kommentar": "Det mjuka vattnet passar utmärkt för de flesta tesorter."
+    }
   }
 }
