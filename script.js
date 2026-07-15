@@ -1,7 +1,6 @@
 // Skapa stjärnor från betyg 1-10
-function stjarnor(betyg) {
-  const antal = Math.round(betyg / 2);
-  return "★".repeat(antal) + "☆".repeat(5 - antal);
+function betyg(värde) {
+  return `${värde}/10`;
 }
 
 
