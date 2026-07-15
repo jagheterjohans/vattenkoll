@@ -1,0 +1,41 @@
+{
+  "kommun": "Sandviken",
+  "vattenverk": "Sandviken",
+
+  "källa": "Sandviken Energi",
+  "rapport_datum": "2025",
+  "senast_uppdaterad": "2026-07-15",
+
+  "vattenvärden": {
+    "hårdhet": 3.5,
+    "kalcium": 19,
+    "magnesium": 4,
+    "klor": false,
+    "pfas": "Ej påvisat"
+  },
+
+  "bedömning": {
+    "dricksvatten": {
+      "betyg": 9,
+      "kommentar": "Rent och mjukt dricksvatten med låg mineralhalt och god smak."
+    },
+
+    "filtrering": {
+      "rekommenderas": false,
+      "hälsoskäl": false,
+      "smak": false,
+      "kaffe": false,
+      "motivering": "Det mjuka vattnet behöver normalt inte filtreras av hälsoskäl. Ett kolfilter kan påverka smak och lukt, men eftersom vattnet redan har låg mineralhalt finns risk att ytterligare filtrering gör vattnet ännu mjukare."
+    },
+
+    "kaffe": {
+      "betyg": 6,
+      "kommentar": "Det mjuka vattnet ger ett rent och mjukt kaffe med mindre kropp. Fylligare och mörkare rostningar passar ofta bra eftersom de bidrar med mer balans och fyllighet."
+    },
+
+    "te": {
+      "betyg": 9,
+      "kommentar": "Det mjuka vattnet passar mycket bra för de flesta tesorter och låter ofta känsligare smaker komma fram."
+    }
+  }
+}
