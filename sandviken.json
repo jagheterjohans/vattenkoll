@@ -1,41 +1,61 @@
 {
   "kommun": "Sandviken",
-  "vattenverk": "Sandviken",
+  "vattenverk": "Rökebo vattenverk",
 
   "källa": "Sandviken Energi",
   "rapport_datum": "2025",
   "senast_uppdaterad": "2026-07-15",
 
   "vattenvärden": {
-    "hårdhet": 3.5,
-    "kalcium": 19,
-    "magnesium": 4,
+    "hårdhet": 2.3,
+    "kalcium": 15,
+    "magnesium": 1,
     "klor": false,
-    "pfas": "Ej påvisat"
+    "pfas": "PFAS4: 0,3 ng/l. PFAS21: 2,8 ng/l."
   },
 
   "bedömning": {
     "dricksvatten": {
-      "betyg": 9,
-      "kommentar": "Rent och mjukt dricksvatten med låg mineralhalt."
+      "betyg": 8,
+      "kommentar": "Ett mycket mjukt vatten med låg mineralhalt."
     },
 
     "filtrering": {
       "rekommenderas": false,
       "hälsoskäl": false,
-      "smak": false,
+      "smak": "individuellt",
       "kaffe": false,
-      "motivering": "Det mjuka vattnet behöver normalt inte filtreras av hälsoskäl. Ett kolfilter kan påverka smak och lukt, men eftersom vattnet redan har låg mineralhalt finns risk att ytterligare filtrering gör vattnet ännu mjukare."
+      "motivering": "Det finns inget tydligt behov av filtrering utifrån analysvärdena. Ett kolfilter kan påverka smak och lukt, men ger ingen tydlig hälsomässig fördel vid dessa värden."
     },
 
     "kaffe": {
-      "betyg": 6,
-      "kommentar": "Det mjuka vattnet ger ett rent och mjukt kaffe med mindre kropp. Fylligare och mörkare rostningar passar ofta bra eftersom de bidrar med mer balans och fyllighet."
+      "betyg": 5,
+      "kommentar": "Det mycket mjuka vattnet ger ett rent och mjukt kaffe, men den låga mineralhalten kan ge mindre kropp. Fylligare och mörkare rostningar kan passa bättre för att skapa balans."
     },
 
     "te": {
       "betyg": 9,
-      "kommentar": "Det mjuka vattnet passar mycket bra för de flesta tesorter och låter ofta känsligare smaker komma fram."
+      "kommentar": "Det mjuka vattnet passar bra för de flesta tesorter och ger ofta en mild smakprofil."
+    }
+  },
+
+  "hem": {
+    "kalk": {
+      "klass": "Mycket mjukt",
+      "kommentar": "Mycket liten risk för kalkavlagringar i dusch, kranar och hushållsapparater."
+    },
+
+    "avkalkning": {
+      "kaffebryggare": "Avkalka vid behov. Det mycket mjuka vattnet ger normalt långsammare kalkbildning.",
+      "övrigt": "Regelbunden avkalkning behövs normalt inte på grund av vattnets hårdhet."
+    },
+
+    "tvätt": {
+      "kommentar": "Mycket mjukt vatten kräver normalt låg dosering av tvättmedel. Följ rekommenderad dosering för mjukt vatten."
+    },
+
+    "diskmaskin": {
+      "kommentar": "Ställ in maskinen på låg hårdhetsgrad. Behovet av diskmaskinssalt är normalt begränsat, men följ alltid maskinens rekommendationer."
     }
   }
 }
