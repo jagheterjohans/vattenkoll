@@ -1,5 +1,3 @@
-
-
 fetch("kommuner.json")
   .then(response => response.json())
   .then(kommuner => {
@@ -8,16 +6,13 @@ fetch("kommuner.json")
 
     kommuner.forEach(kommun => {
 
-      const div = document.createElement("div");
+      const knapp = document.createElement("button");
 
-      div.innerHTML = `
-        <h2>${kommun.namn}</h2>
-        <button onclick="visaKommun('${kommun.id}')">
-          Visa vattenprofil
-        </button>
-      `;
+      knapp.textContent = kommun.namn;
 
-      lista.appendChild(div);
+      knapp.onclick = () => visaKommun(kommun.id);
+
+      lista.appendChild(knapp);
 
     });
 
@@ -30,31 +25,43 @@ function visaKommun(id){
       .then(response => response.json())
       .then(data => {
 
-          alert(
-`${data.kommun}
+        const profil = document.getElementById("vattenprofil");
 
-Vattenverk: ${data.vattenverk}
+        profil.innerHTML = `
 
-Hårdhet: ${data.hårdhet} °dH
+        <h2>${data.kommun}</h2>
 
-Kalcium: ${data.kalcium} mg/L
+        <h3>Vattenverk</h3>
+        <p>${data.vattenverk}</p>
 
-Magnesium: ${data.magnesium} mg/L
+        <h3>🧪 Vattenvärden</h3>
 
-Klor: ${data.klor ? "Ja" : "Nej"}
+        <ul>
+          <li>Hårdhet: ${data.hårdhet} °dH</li>
+          <li>Kalcium: ${data.kalcium} mg/L</li>
+          <li>Magnesium: ${data.magnesium} mg/L</li>
+          <li>Klor: ${data.klor ? "Ja" : "Nej"}</li>
+          <li>PFAS: ${data.pfas}</li>
+        </ul>
 
-PFAS: ${data.pfas}
+        <h3>☕ Kaffe</h3>
 
-☕ Kaffe: ${data.kaffe.betyg}/10
-${data.kaffe.kommentar}
+        <p>
+        Betyg: ${data.kaffe.betyg}/10
+        </p>
 
-🍵 Te: ${data.te.betyg}/10`
-          );
+        <p>
+        ${data.kaffe.kommentar}
+        </p>
 
-      })
-      .catch(error => {
-          console.error("Kunde inte läsa vattenprofil:", error);
-          alert("Kunde inte hitta vattenprofilen.");
+        <h3>🍵 Te</h3>
+
+        <p>
+        Betyg: ${data.te.betyg}/10
+        </p>
+
+        `;
+
       });
 
 }
