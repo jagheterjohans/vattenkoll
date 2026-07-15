@@ -131,7 +131,44 @@ ${betyg(data.bedömning.te.betyg)}
 
       </div>
 
+<div class="kort">
 
+<h3>Hem och hushåll</h3>
+
+<p>
+<strong>Kalknivå:</strong>
+${data.hem.kalk.klass}
+</p>
+
+<p>
+${data.hem.kalk.kommentar}
+</p>
+
+<h4>Avkalkning</h4>
+
+<p>
+${data.hem.avkalkning.kaffebryggare}
+</p>
+
+<p>
+${data.hem.avkalkning.övrigt}
+</p>
+
+
+<h4>Tvätt</h4>
+
+<p>
+${data.hem.tvätt.kommentar}
+</p>
+
+
+<h4>Diskmaskin</h4>
+
+<p>
+${data.hem.diskmaskin.kommentar}
+</p>
+
+</div>
 
       <details>
 
