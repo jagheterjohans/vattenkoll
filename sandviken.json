@@ -39,7 +39,7 @@
     }
   },
 
-  "hem": {
+ "hem": {
     "kalk": {
       "klass": "Mycket mjukt",
       "kommentar": "Mycket liten risk för kalkavlagringar i dusch, kranar och hushållsapparater."
@@ -51,11 +51,11 @@
     },
 
     "tvätt": {
-      "kommentar": "Mycket mjukt vatten kräver normalt låg dosering av tvättmedel. Följ rekommenderad dosering för mjukt vatten."
+      "kommentar": "Mycket mjukt vatten kräver normalt låg dosering av tvättmedel."
     },
 
     "diskmaskin": {
-      "kommentar": "Ställ in maskinen på låg hårdhetsgrad. Behovet av diskmaskinssalt är normalt begränsat, men följ alltid maskinens rekommendationer."
+      "kommentar": "Ställ in maskinen på låg hårdhetsgrad."
     }
   }
 }
