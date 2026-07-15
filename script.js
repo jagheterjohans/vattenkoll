@@ -21,17 +21,38 @@ fetch("kommuner.json")
 
   });
 
+
 function visaKommun(id){
 
-    fetch(`data/${id}.json`)
+    fetch(`${id}.json`)
       .then(response => response.json())
       .then(data => {
 
           alert(
-            `${data.kommun}\n\nKaffe: ${data.kaffe}/10\nSmak: ${data.smak}/10`
+`${data.kommun}
+
+Vattenverk: ${data.vattenverk}
+
+Hårdhet: ${data.hårdhet} °dH
+
+Kalcium: ${data.kalcium} mg/L
+
+Magnesium: ${data.magnesium} mg/L
+
+Klor: ${data.klor ? "Ja" : "Nej"}
+
+PFAS: ${data.pfas}
+
+☕ Kaffe: ${data.kaffe.betyg}/10
+${data.kaffe.kommentar}
+
+🍵 Te: ${data.te.betyg}/10`
           );
 
+      })
+      .catch(error => {
+          console.error("Kunde inte läsa vattenprofil:", error);
+          alert("Kunde inte hitta vattenprofilen.");
       });
 
 }
-Nu händer följande:
