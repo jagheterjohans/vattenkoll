@@ -1,3 +1,11 @@
+// Skapa stjärnor från betyg 1-10
+function stjarnor(betyg) {
+  const antal = Math.round(betyg / 2);
+  return "★".repeat(antal) + "☆".repeat(5 - antal);
+}
+
+
+// Läser in kommunlistan
 fetch("kommuner.json")
   .then(response => response.json())
   .then(kommuner => {
@@ -16,52 +24,173 @@ fetch("kommuner.json")
 
     });
 
+  })
+  .catch(error => {
+    console.error("Kunde inte läsa kommuner:", error);
   });
 
 
-function visaKommun(id){
 
-    fetch(`${id}.json`)
-      .then(response => response.json())
-      .then(data => {
+// Visar vald kommun
+function visaKommun(id) {
 
-        const profil = document.getElementById("vattenprofil");
+  fetch(`${id}.json`)
+    .then(response => {
 
-        profil.innerHTML = `
+      if (!response.ok) {
+        throw new Error("Kunde inte hitta " + id + ".json");
+      }
 
-        <h2>${data.kommun}</h2>
+      return response.json();
 
-        <h3>Vattenverk</h3>
-        <p>${data.vattenverk}</p>
+    })
+    .then(data => {
 
-        <h3>🧪 Vattenvärden</h3>
+
+      const profil = document.getElementById("vattenprofil");
+
+
+      profil.innerHTML = `
+
+      <h2>💧 ${data.kommun}</h2>
+
+      <p><strong>Vattenverk:</strong> ${data.vattenverk}</p>
+
+
+      <div class="kort">
+
+        <h3>💧 Dricksvatten</h3>
+
+        <p class="betyg">
+          ${stjarnor(data.bedömning.dricksvatten.betyg)}
+        </p>
+
+        <p>
+          ${data.bedömning.dricksvatten.kommentar}
+        </p>
+
+      </div>
+
+
+
+      <div class="kort">
+
+        <h3>🧰 Filtrering</h3>
+
+        <p>
+        ${data.bedömning.filtrering.motivering}
+        </p>
 
         <ul>
-          <li>Hårdhet: ${data.hårdhet} °dH</li>
-          <li>Kalcium: ${data.kalcium} mg/L</li>
-          <li>Magnesium: ${data.magnesium} mg/L</li>
-          <li>Klor: ${data.klor ? "Ja" : "Nej"}</li>
-          <li>PFAS: ${data.pfas}</li>
+          <li>
+          Hälsoskäl:
+          ${data.bedömning.filtrering.hälsoskäl ? "Ja" : "Nej"}
+          </li>
+
+          <li>
+          Smak:
+          ${data.bedömning.filtrering.smak ? "Kan förbättras" : "Ingen större skillnad"}
+          </li>
+
+          <li>
+          Kaffe:
+          ${data.bedömning.filtrering.kaffe ? "Rekommenderas" : "Inte nödvändigt"}
+          </li>
         </ul>
+
+      </div>
+
+
+
+      <div class="kort">
 
         <h3>☕ Kaffe</h3>
 
-        <p>
-        Betyg: ${data.kaffe.betyg}/10
+        <p class="betyg">
+        ${stjarnor(data.bedömning.kaffe.betyg)}
         </p>
 
         <p>
-        ${data.kaffe.kommentar}
+        ${data.bedömning.kaffe.kommentar}
         </p>
+
+      </div>
+
+
+
+      <div class="kort">
 
         <h3>🍵 Te</h3>
 
-        <p>
-        Betyg: ${data.te.betyg}/10
+        <p class="betyg">
+        ${stjarnor(data.bedömning.te.betyg)}
         </p>
 
-        `;
+        <p>
+        ${data.bedömning.te.kommentar}
+        </p>
 
-      });
+      </div>
+
+
+
+      <details>
+
+        <summary>🧪 Tekniska analysvärden</summary>
+
+        <ul>
+
+          <li>
+          Hårdhet:
+          ${data.vattenvärden.hårdhet} °dH
+          </li>
+
+          <li>
+          Kalcium:
+          ${data.vattenvärden.kalcium} mg/L
+          </li>
+
+          <li>
+          Magnesium:
+          ${data.vattenvärden.magnesium} mg/L
+          </li>
+
+          <li>
+          Klor:
+          ${data.vattenvärden.klor ? "Ja" : "Nej"}
+          </li>
+
+          <li>
+          PFAS:
+          ${data.vattenvärden.pfas}
+          </li>
+
+        </ul>
+
+      </details>
+
+
+
+      <p class="uppdaterad">
+
+      Källa: ${data.källa}<br>
+      Rapport: ${data.rapport_datum}<br>
+      Senast uppdaterad: ${data.senast_uppdaterad}
+
+      </p>
+
+
+      `;
+
+
+    })
+    .catch(error => {
+
+      console.error(error);
+
+      document.getElementById("vattenprofil").innerHTML =
+      "<p>Vattenprofil finns inte.</p>";
+
+    });
 
 }
