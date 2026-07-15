@@ -1,0 +1,16 @@
+{
+  "kommun": "Gävle",
+  "vattenverk": "Valboåsen",
+  "hårdhet": 5,
+  "kalcium": 21,
+  "magnesium": 2,
+  "klor": false,
+  "pfas": "Under gränsvärde",
+  "kaffe": {
+    "betyg": 6,
+    "kommentar": "Lite för mjukt för filterkaffe."
+  },
+  "te": {
+    "betyg": 9
+  }
+}
