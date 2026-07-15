@@ -1,0 +1,14 @@
+[
+  {
+    "kommun":"Gävle",
+    "smak":9,
+    "kaffe":6,
+    "filter":"Brita rekommenderas endast för dricksvatten."
+  },
+  {
+    "kommun":"Östersund",
+    "smak":10,
+    "kaffe":10,
+    "filter":"Ingen filtrering behövs."
+  }
+]
